@@ -1,10 +1,7 @@
 
 // Display the menu options
-function displayMenu() {
-  E.showMessage('1. Option 1');
-  E.showMessage('2. Option 2');
-  E.showMessage('3. Option 3');
+ var boxMenu = {
+    '< Back': function() { E.showMenu(menu) },
  }
-
-// Start the application by displaying the menu
-displayMenu();
+  menu[/*LANG*/"Boxes"] = function() { E.showMenu(boxMenu)};
+  E.showMenu(menu);
