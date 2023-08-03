@@ -1,6 +1,6 @@
 { "id": "timer",
   "name": "Timer C",
-  "version":"0.1",
+  "version":"0.01",
   "description": "Displays distance, time, steps, cadence, pace and more for runners.",
   "icon": "app.png",
   "tags": "run,running,fitness,outdoors,gps",
