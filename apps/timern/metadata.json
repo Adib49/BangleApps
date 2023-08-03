@@ -1,0 +1,16 @@
+{ "id": "timern",
+  "name": "Timer NN",
+  "version":"0.01",
+  "description": "Displays distance, time, steps, cadence, pace and more for runners.",
+  "icon": "app.png",
+  "tags": "run,running,fitness,outdoors,gps",
+  "supports" : ["BANGLEJS"],
+  "screenshots": [{"url":"screenshot.png"}],
+  "readme": "README.md",
+  "storage": [
+    {"name":"timern.app.js","url":"app.js"},
+    {"name":"timern.img","url":"app-icon.js","evaluate":true},
+    {"name":"timern.settings.js","url":"settings.js"}
+  ],
+  "data": [{"name":"timern.json"}]
+}
