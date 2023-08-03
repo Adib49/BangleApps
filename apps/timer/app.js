@@ -1,5 +1,5 @@
 var ExStats = require("exstats");
-var B2 = process.env.HWVERSION===1;
+var B2 = process.env.HWVERSION===2;
 var Layout = require("Layout");
 var locale = require("locale");
 var fontHeading = "6x8:2";
