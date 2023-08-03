@@ -2,6 +2,8 @@ g.clear();
 Bangle.loadWidgets();
 Bangle.drawWidgets();
 
+const SETTINGS_FILE = "settings.json";
+
 const mainMenu = {
   "": { "title": "-- Menu --" },
   "option1": () => { Bangle.showAlert("Hello"); },
@@ -23,6 +25,35 @@ const mainMenu = {
     });
   }
 };
+
+function calculateTimeNeeded(distance) {
+  // Implement your own function to calculate time needed based on distance
+  // You can use a formula or any other method depending on your use case
+  return distance / 10; // This is just a placeholder example
+}
+
+function buzzForOneMinute() {
+  Bangle.buzz();
+  setTimeout(() => Bangle.buzz(0), 60000); // Buzz for 1 minute (60000 ms)
+}
+
+function saveSettings() {
+  require("Storage").write(SETTINGS_FILE, JSON.stringify(settings));
+}
+
+function loadSettings() {
+  let settings;
+  try {
+    settings = require("Storage").readJSON(SETTINGS_FILE);
+  } catch (e) {
+    settings = {};
+  }
+  return settings;
+}
+
+let settings = loadSettings();
+Bangle.setUI("updown", mainMenu);
+
 
 function calculateTimeNeeded(distance) {
   // Implement your own function to calculate time needed based on distance
