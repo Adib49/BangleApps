@@ -1,5 +1,5 @@
 (function(back) {
-  const SETTINGS_FILE = "run.json";
+  const SETTINGS_FILE = "timer.json";
   var ExStats = require("exstats");
   var statsList = ExStats.getList();
   statsList.unshift({name:"-",id:""}); // add blank menu item
