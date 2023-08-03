@@ -1,5 +1,5 @@
 { "id": "timer",
-  "name": "Timer C",
+  "name": "Timer D",
   "version":"0.16",
   "description": "Displays distance, time, steps, cadence, pace and more for runners.",
   "icon": "app.png",
