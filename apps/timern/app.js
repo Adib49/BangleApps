@@ -1,6 +1,7 @@
 g.clear();
 Bangle.loadWidgets();
 Bangle.drawWidgets();
+const SETTINGS_FILE = "settings.js";
 
 const { SETTINGS_FILE, saveSettings, loadSettings } = require("settings.js");
 const mainMenu = {
