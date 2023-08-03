@@ -2,8 +2,6 @@ var ExStats = require("exstats");
 var B2 = process.env.HWVERSION===2;
 var Layout = require("Layout");
 var locale = require("locale");
-var fontHeading = "6x8:2";
-var fontValue = B2 ? "6x15:2" : "6x8:3";
 var headingCol = "#888";
 var fixCount = 0;
 var isMenuDisplayed = false;
