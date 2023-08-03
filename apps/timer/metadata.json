@@ -4,7 +4,7 @@
   "description": "Displays distance, time, steps, cadence, pace and more for runners.",
   "icon": "app.png",
   "tags": "run,running,fitness,outdoors,gps",
-  "supports" : ["BANGLEJS","BANGLEJS2"],
+  "supports" : ["BANGLEJS"],
   "screenshots": [{"url":"screenshot.png"}],
   "readme": "README.md",
   "storage": [
