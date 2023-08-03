@@ -2,8 +2,7 @@ g.clear();
 Bangle.loadWidgets();
 Bangle.drawWidgets();
 
-const SETTINGS_FILE = "settings.json";
-
+const { SETTINGS_FILE, saveSettings, loadSettings } = require("settings.js");
 const mainMenu = {
   "": { "title": "-- Menu --" },
   "option1": () => { Bangle.showAlert("Hello"); },
