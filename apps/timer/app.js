@@ -1,7 +1,7 @@
 
 // Display the menu options
- var boxMenu = {
-    '< Back': function() { E.showMenu(menu) },
+ function showMainMenu() {
+   const mainmenu = {
+    '': { 'title': /*LANG*/'Recorder' } }
  }
-  menu[/*LANG*/"Boxes"] = function() { E.showMenu(boxMenu)};
-  E.showMenu(menu);
+ showMainMenu();
