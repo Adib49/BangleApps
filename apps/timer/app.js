@@ -36,7 +36,7 @@ let settings = Object.assign({
       notifications: [],
     },
   },
-}, require("Storage").readJSON("run.json", 1) || {});
+}, require("Storage").readJSON("timer.json", 1) || {});
 var statIDs = [settings.B1,settings.B2,settings.B3,settings.B4,settings.B5,settings.B6].filter(s=>s!=="");
 var exs = ExStats.getStats(statIDs, settings);
 // ---------------------------
