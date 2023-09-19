@@ -1,7 +1,1 @@
 0.01: New App!
-0.02: Use 'recorder.log..' rather than 'record.log..'
-      Fix interface.html
-0.03: Fix theme and maps/graphing if no GPS
-0.04: Multiple bugfixes
-0.05: Add recording for coresensor
-0.06: Add recording for battery stats
