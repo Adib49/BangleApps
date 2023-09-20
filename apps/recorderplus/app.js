@@ -9,30 +9,30 @@ try { // if it's installed, use the OpenStreetMap module
 } catch (e) {}
 
 function loadSettings() {
-  settings = require("Storage").readJSON("recorder.json",1)||{};
+  settings = require("Storage").readJSON("recorderplus.json",1)||{};
   var changed = false;
   if (!settings.file) {
     changed = true;
-    settings.file = "recorder.log0.csv";
+    settings.file = "recorderplus.log0.csv";
   }
   if (!Array.isArray(settings.record)) {
     settings.record = ["gps"];
     changed = true;
   }
   if (changed)
-    require("Storage").writeJSON("recorder.json", settings);
+    require("Storage").writeJSON("recorderplus.json", settings);
 }
 loadSettings();
 
 function updateSettings() {
-  require("Storage").writeJSON("recorder.json", settings);
+  require("Storage").writeJSON("recorderplus.json", settings);
   if (WIDGETS["recorder"])
     WIDGETS["recorder"].reload();
 }
 
 function getTrackNumber(filename) {
   var trackNum = 0;
-  var matches = filename.match(/^recorder\.log(.*)\.csv$/);
+  var matches = filename.match(/^recorderplus\.log(.*)\.csv$/);
   if (matches) {
     trackNum = parseInt(matches[1]||0);
   }
@@ -52,7 +52,7 @@ function showMainMenu() {
     };
   }
   const mainmenu = {
-    '': { 'title': /*LANG*/'Recorder' },
+    '': { 'title': /*LANG*/'recorderplus' },
     '< Back': ()=>{load();},
     /*LANG*/'RECORD': {
       value: !!settings.recording,
@@ -76,7 +76,7 @@ function showMainMenu() {
       step: 1,
       onchange: v => {
         settings.recording = false; // stop recording if we change anything
-        settings.file = "recorder.log"+v+".csv";
+        settings.file = "recorderplus.log"+v+".csv";
         updateSettings();
       }
     },
@@ -109,7 +109,7 @@ function viewTracks() {
     '': { 'title': /*LANG*/'Tracks' }
   };
   var found = false;
-  require("Storage").list(/^recorder\.log.*\.csv$/,{sf:true}).forEach(filename=>{
+  require("Storage").list(/^recorderplus\.log.*\.csv$/,{sf:true}).forEach(filename=>{
     found = true;
     menu[/*LANG*/"Track "+getTrackNumber(filename)] = ()=>viewTrack(filename,false);
   });
