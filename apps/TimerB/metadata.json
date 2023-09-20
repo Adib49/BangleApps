@@ -1,12 +1,12 @@
 {
-  "id": "timerB",
+ "id": "timerB",
   "name": "Recorder_p",
   "shortName": "Recorder",
-  "version": "0.01",
+  "version": "0.29",
   "description": "Record GPS position, heart rate and more in the background, then download to your PC.",
   "icon": "app.png",
   "tags": "tool,outdoors,gps,widget",
-  "supports": ["BANGLEJS","BANGLEJS2"],
+  "supports": ["BANGLEJS"],
   "readme": "README.md",
   "interface": "interface.html",
   "storage": [
@@ -15,5 +15,8 @@
     {"name":"timerB.wid.js","url":"widget.js"},
     {"name":"timerB.settings.js","url":"settings.js"}
   ],
-  "data": [{"name":"timerB.json","url":"app-settings.json"},{"wildcard":"timerB.log?.csv","storageFile":true}]
+  "data": [
+    {"name":"timerB.json","url":"app-settings.json"},
+    {"wildcard":"timerB.log?.csv","storageFile":true}
+  ]
 }
