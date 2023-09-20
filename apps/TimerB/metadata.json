@@ -10,10 +10,10 @@
   "readme": "README.md",
   "interface": "interface.html",
   "storage": [
-    {"name":"TimerB.app.js","url":"app.js"},
-    {"name":"TimerB.img","url":"app-icon.js","evaluate":true},
-    {"name":"TimerB.wid.js","url":"widget.js"},
-    {"name":"TimerB.settings.js","url":"settings.js"}
+    {"name":"timerB.app.js","url":"app.js"},
+    {"name":"timerB.img","url":"app-icon.js","evaluate":true},
+    {"name":"timerB.wid.js","url":"widget.js"},
+    {"name":"timerB.settings.js","url":"settings.js"}
   ],
-  "data": [{"name":"TimerB.json","url":"app-settings.json"},{"wildcard":"TimerB.log?.csv","storageFile":true}]
+  "data": [{"name":"timerB.json","url":"app-settings.json"},{"wildcard":"timerB.log?.csv","storageFile":true}]
 }
