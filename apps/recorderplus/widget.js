@@ -234,22 +234,22 @@
   },setRecording:function(isOn, forceAppend) {
     var settings = loadSettings();
     if (isOn && !settings.recording && !settings.file) {
-      settings.file = "recorder.log0.csv";
+      settings.file = "recorderplus.log0.csv";
     } else if (isOn && !forceAppend && !settings.recording && require("Storage").list(settings.file).length){
-      var logfiles=require("Storage").list(/recorder.log.*/);
+      var logfiles=require("Storage").list(/recorderplus.log.*/);
       var maxNumber=0;
       for (var c of logfiles){
           maxNumber = Math.max(maxNumber, c.match(/\d+/)[0]);
       }
       var newFileName;
       if (maxNumber < 99){
-        newFileName="recorder.log" + (maxNumber + 1) + ".csv";
+        newFileName="recorderplus.log" + (maxNumber + 1) + ".csv";
         updateSettings(settings);
       }
       var buttons={/*LANG*/"Yes":"overwrite",/*LANG*/"No":"cancel"};
       if (newFileName) buttons[/*LANG*/"New"] = "new";
       buttons[/*LANG*/"Append"] = "append";
-      return E.showPrompt(/*LANG*/"Overwrite\nLog " + settings.file.match(/\d+/)[0] + "?",{title:/*LANG*/"Recorder",buttons:buttons}).then(selection=>{
+      return E.showPrompt(/*LANG*/"Overwrite\nLog " + settings.file.match(/\d+/)[0] + "?",{title:/*LANG*/"recorderplus",buttons:buttons}).then(selection=>{
         if (selection==="cancel") return false; // just cancel
         if (selection==="overwrite")
           require("Storage").open(settings.file,"r").erase();
