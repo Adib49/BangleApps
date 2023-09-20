@@ -1,6 +1,6 @@
 {
   "id": "timerB",
-  "name": "RecorderPlus",
+  "name": "Recorder_p",
   "shortName": "Recorder",
   "version": "0.01",
   "description": "Record GPS position, heart rate and more in the background, then download to your PC.",
