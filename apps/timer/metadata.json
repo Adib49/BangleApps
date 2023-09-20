@@ -1,6 +1,6 @@
 { "id": "timer",
   "name": "Screen Plus",
-  "shortName": "screen_plus",
+  "shortName":timer",
   "version":"0.16",
   "description": "Displays distance, time, steps, cadence, pace and more for runners.",
   "icon": "app.png",
