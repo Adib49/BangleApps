@@ -1,6 +1,6 @@
 {
-  "id": "recorderB",
-  "name": "Recorder Plus",
+  "id": "TimerB",
+  "name": "TimerB",
   "shortName": "recorderB",
   "version": "0.01",
   "description": "Record GPS position, heart rate and more in the background, then download to your PC.",
@@ -10,10 +10,10 @@
   "readme": "README.md",
   "interface": "interface.html",
   "storage": [
-    {"name":"recorderB.app.js","url":"app.js"},
-    {"name":"recorderB.img","url":"app-icon.js","evaluate":true},
-    {"name":"recorderB.wid.js","url":"widget.js"},
-    {"name":"recorderB.settings.js","url":"settings.js"}
+    {"name":"TimerB.app.js","url":"app.js"},
+    {"name":"TimerB.img","url":"app-icon.js","evaluate":true},
+    {"name":"TimerB.wid.js","url":"widget.js"},
+    {"name":"TimerB.settings.js","url":"settings.js"}
   ],
-  "data": [{"name":"recorderB.json","url":"app-settings.json"},{"wildcard":"recorderB.log?.csv","storageFile":true}]
+  "data": [{"name":"TimerB.json","url":"app-settings.json"},{"wildcard":"TimerB.log?.csv","storageFile":true}]
 }
