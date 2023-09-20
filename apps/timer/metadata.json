@@ -1,5 +1,5 @@
 { "id": "timer",
-  "name": "timer",
+  "name": "screenPlus",
   "shortName":"screenPlus",
   "version":"0.16",
   "description": "Displays distance, time, steps, cadence, pace and more for runners.",
