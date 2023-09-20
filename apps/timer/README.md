@@ -1,4 +1,4 @@
-# Run App
+#Screen PLus App
 
 This app allows you to display the status of your run, it
 shows distance, time, and steps.
