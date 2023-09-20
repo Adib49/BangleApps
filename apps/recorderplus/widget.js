@@ -5,15 +5,15 @@
   let writeInterval;
 
   let loadSettings = function() {
-    var settings = require("Storage").readJSON("recorder.json",1)||{};
+    var settings = require("Storage").readJSON("recorderplus.json",1)||{};
     settings.period = settings.period||10;
-    if (!settings.file || !settings.file.startsWith("recorder.log"))
+    if (!settings.file || !settings.file.startsWith("recorderplus.log"))
       settings.recording = false;
     return settings;
   }
 
   let updateSettings = function(settings) {
-    require("Storage").writeJSON("recorder.json", settings);
+    require("Storage").writeJSON("recorderplus.json", settings);
     if (WIDGETS["recorder"]) WIDGETS["recorder"].reload();
   }
 
@@ -172,7 +172,7 @@
       console.log("recorder: error", e);
       var settings = loadSettings();
       settings.recording = false;
-      require("Storage").write("recorder.json", settings);
+      require("Storage").write("recorderplus.json", settings);
       reload();
     }
   }
