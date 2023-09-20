@@ -1,6 +1,6 @@
-{ "id": "timer",
+{ "id": "screenPlus",
   "name": "Screen Plus",
-  "shortName":"timer",
+  "shortName":"screenPlus",
   "version":"0.16",
   "description": "Displays distance, time, steps, cadence, pace and more for runners.",
   "icon": "app.png",
@@ -9,9 +9,9 @@
   "screenshots": [{"url":"screenshot.png"}],
   "readme": "README.md",
   "storage": [
-    {"name":"timer.app.js","url":"app.js"},
-    {"name":"timer.img","url":"app-icon.js","evaluate":true},
-    {"name":"timer.settings.js","url":"settings.js"}
+    {"name":"screenPlus.app.js","url":"app.js"},
+    {"name":"screenPlus.img","url":"app-icon.js","evaluate":true},
+    {"name":"screenPlus.settings.js","url":"settings.js"}
   ],
-  "data": [{"name":"timer.json"}]
+  "data": [{"name":"screenPlus.json"}]
 }
