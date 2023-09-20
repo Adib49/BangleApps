@@ -172,7 +172,7 @@ function downloadTrack(filename, callback) {
 function getTrackList() {
   Util.showModal("Loading Track List...");
   domTracks.innerHTML = "";
-  Puck.eval(`require("Storage").list(/^recorder\\.log.*\\.csv$/,{sf:1})`,files=>{
+  Puck.eval(`require("Storage").list(/^recorderplus\\.log.*\\.csv$/,{sf:1})`,files=>{
     var trackList = [];
     var promise = Promise.resolve();
     /* For each file ask Bangle.js for info. Since we now start recording even
@@ -180,7 +180,7 @@ function getTrackList() {
     to see if it found any data first. */
     files.forEach(filename => {
       promise = promise.then(()=>new Promise(resolve => {
-        var trackNo = filename.match(/^recorder\.log(.*)\.csv$/)[1];
+        var trackNo = filename.match(/^recorderplus\.log(.*)\.csv$/)[1];
         Util.showModal(`Loading Track ${trackNo}...`);
         Puck.eval(`(function(fn) {
   var f = require("Storage").open(fn,"r");
