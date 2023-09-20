@@ -1,0 +1,22 @@
+{
+ "id": "recorderplus",
+  "name": "Recorderplus",
+  "shortName": "Recorderplus",
+  "version": "0.29",
+  "description": "Record GPS position, heart rate and more in the background, then download to your PC.",
+  "icon": "app.png",
+  "tags": "tool,outdoors,gps,widget",
+  "supports": ["BANGLEJS"],
+  "readme": "README.md",
+  "interface": "interface.html",
+  "storage": [
+    {"name":"recorderplus.app.js","url":"app.js"},
+    {"name":"recorderplus.img","url":"app-icon.js","evaluate":true},
+    {"name":"recorderplus.wid.js","url":"widget.js"},
+    {"name":"recorderplus.settings.js","url":"settings.js"}
+  ],
+  "data": [
+    {"name":"recorderplus.json","url":"app-settings.json"},
+    {"wildcard":"recorderplus.log?.csv","storageFile":true}
+  ]
+}
